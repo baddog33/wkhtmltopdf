@@ -17,9 +17,12 @@ app.post("/convert", (req, res) => {
     marginLeft: 0,
     marginRight: 0,
     dpi: 300,
-    encoding: "utf-8"
+    encoding: "utf-8",
+    grayscale: true,
+    disableSmartShrinking: true
   }).pipe(res);
 });
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`wkhtmltopdf API running on port ${PORT}`));
+
